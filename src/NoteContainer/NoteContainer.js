@@ -1,53 +1,17 @@
-import React from 'react'
-import Note from '../Note/Note'
-import "./NoteContainer.css"
-function NoteContainer() {
+import React from "react";
+import Note from "../Note/Note";
+import "./NoteContainer.css";
+function NoteContainer({ props }) {
   return (
     <div className="note-container">
-      <Note props = 
-      {{
-        text:"",
-        color:"aqua",
-        time:"10:18 PM"
-      }}/>
-      <Note props = 
-      {{
-        text:"",
-        color:"aqua",
-        time:"10:18 PM"
-      }}/>
-      <Note props = 
-      {{
-        text:"",
-        color:"aqua",
-        time:"10:18 PM"
-      }}/>
-      <Note props = 
-      {{
-        text:"",
-        color:"aqua",
-        time:"10:18 PM"
-      }}/>
-      <Note props = 
-      {{
-        text:"",
-        color:"aqua",
-        time:"10:18 PM"
-      }}/>
-      <Note props = 
-      {{
-        text:"",
-        color:"aqua",
-        time:"10:18 PM"
-      }}/>
-      <Note props = 
-      {{
-        text:"",
-        color:"aqua",
-        time:"10:18 PM"
-      }}/>
+      <h1>Notes</h1>
+      <div className="notes custom-scroll">
+        {props.map((item, index) => {
+          return <Note props={item} key={index} />;
+        })}
+      </div>
     </div>
-  )
+  );
 }
 
-export default NoteContainer
+export default NoteContainer;

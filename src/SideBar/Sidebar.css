@@ -1,4 +1,33 @@
 .sidebar{
-    padding: 50px;
-    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
 }
+.plus
+{
+    width: 90px;
+    margin-left: 10px;
+    cursor: pointer;
+    
+}
+.color-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 300ms;
+    opacity: 0;
+}
+.color
+  {
+    margin-left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    list-style: none;
+  }
+  .color-active
+  {
+    opacity: 1;
+  }
